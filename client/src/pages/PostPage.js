@@ -15,7 +15,7 @@ export default function PostPage() {
   const { userInfo } = useContext(UserContext);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:4000/post/${id}`).then((response) => {
+    fetch(`https://blogfuse-backend.vercel.app/post/${id}`).then((response) => {
       response.json().then((postInfo) => {
         setPostInfo(postInfo);
       });
@@ -24,7 +24,7 @@ export default function PostPage() {
 
   // for comments
   useEffect(() => {
-    fetch(`http://localhost:4000/comments/${id}`).then((response) => {
+    fetch(`https://blogfuse-backend.vercel.app/comments/${id}`).then((response) => {
       response.json().then((commentInfo) => {
         setComment(commentInfo);
       });
@@ -49,7 +49,7 @@ export default function PostPage() {
       // console.log(userinfo);
       try {
         const res=await axios
-          .post("http://localhost:4000/comment/" + postInfo._id, userinfo);
+          .post("https://blogfuse-backend.vercel.app/comment/" + postInfo._id, userinfo);
           // .then((res) => {
           //   // console.log(res);
             setComment("hello");
@@ -106,7 +106,7 @@ export default function PostPage() {
         </div>
       )}
       <div className="image">
-        <img src={`http://localhost:4000/${postInfo.cover}`} alt="" />
+        <img src={`https://blogfuse-backend.vercel.app/${postInfo.cover}`} alt="" />
       </div>
       <div
         className="content"

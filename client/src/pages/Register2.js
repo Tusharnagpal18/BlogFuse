@@ -10,7 +10,7 @@ const Register2 = () => {
   const registerHandler=async (ev)=>{
     try {
       ev.preventDefault();
-      const response = await fetch("http://localhost:4000/register", {
+      const response = await fetch("https://blogfuse-backend.vercel.app/register", {
         method: "POST",
         body: JSON.stringify({ username, password }),
         headers: { "Content-Type": "application/json" },
@@ -18,7 +18,7 @@ const Register2 = () => {
 
       alert("Registration success!!");
 
-      // const res=await fetch(`http://localhost:4000/sendmail/${mail}`,{
+      // const res=await fetch(`https://blogfuse-backend.vercel.app/sendmail/${mail}`,{
       //   method:"GET"
       // })
       // console.log("res",res);

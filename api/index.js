@@ -15,7 +15,7 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const salt = bcrypt.genSaltSync(10);
-const secret = "dsd";
+const secret = "qwertuiofalfsd";
 
 const corsOptions = {
   origin: "http://localhost:3000",

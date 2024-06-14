@@ -10,7 +10,7 @@
 //     console.log("in delete function");
 //     const data = new FormData();
 //     // data.set("id", id);
-//     const response = await fetch("http://localhost:4000/delete/${id}", {
+//     const response = await fetch("https://blogfuse-backend.vercel.app/delete/${id}", {
 //       method: "DELETE",
 //       body: data,
 //       credentials: "include",
@@ -43,7 +43,7 @@ const DeletePost = () => {
 
   const [redirect, setRedirect] = useState(false);
   // useEffect(() => {
-  //   fetch(`http://localhost:4000/post/${id}`)
+  //   fetch(`https://blogfuse-backend.vercel.app/post/${id}`)
   //     .then(response => {
   //       response.json().then(postInfo => {
   //         // setPostInfo(postInfo);
@@ -57,7 +57,7 @@ const DeletePost = () => {
     // data.set("id", id);
     // console.log(id+"id");
     try {
-      const response = await fetch("http://localhost:4000/delete/" + id, {
+      const response = await fetch("https://blogfuse-backend.vercel.app/delete/" + id, {
         method: "DELETE",
         body: { id },
         credentials: "include",
